@@ -23,6 +23,6 @@ if __name__ == "__main__":
     print(url)
     wget.download(url, yesterday + '.csv')
     # uploading to s3
-    os.system('aws s3 cp ' + yesterday + '.csv s3://github-data-group4/github/'+year+'/'+month)
+    os.system('aws s3 cp ' + yesterday + '.csv s3://github-data-group4/github/'+year+'/'+month+'/')
     # for lambdas check out https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions
     sc.stop()
